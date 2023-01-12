@@ -73,4 +73,37 @@ fn main() {
     let mut array2: [i32; 3] = [4, 5, 6];
     println!("{}", array2[0]);
     array2[0] = 10;
+
+    // Vector
+
+    let mut vec = Vec::new();
+    vec.push(1);
+    vec.push(2);
+    vec.push(3);
+    vec.push(4);
+
+    println!("{:?}", vec);
+
+    vec.pop();
+
+    println!("{:?}", vec);
+
+    // create using vec macro
+
+    let mut strings = vec!["hi", "bye"];
+
+    println!("{:?}", strings);
+    strings.reverse();
+    println!("{:?}", strings);
+
+    // create empty vector with size
+
+    let mut vect = Vec::<i32>::with_capacity(2);
+    println!("{}", vect.capacity());
+
+    // create vector with iteration
+
+    let v: Vec<i32> = (0..5).collect();
+
+    println!("{:?}", v);
 }
